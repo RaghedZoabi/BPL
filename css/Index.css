@@ -1,0 +1,1478 @@
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+
+body {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+  background-image: url('../images/background.jpg') ;
+  background-size: 100% 100%;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.headerimage
+{
+  height: 75%;
+}
+
+body .wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body .wrapper span {
+  z-index: 9999;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 35px;
+  height: 4px;
+  background: #ffffff;
+  cursor: pointer;
+}
+body .wrapper span:before, body .wrapper span:after {
+  display: block;
+  position: absolute;
+  content: '';
+  left: 0;
+  height: 4px;
+  width: 35px;
+  background: #ffffff;
+}
+body .wrapper span:before {
+  top: -8px;
+}
+body .wrapper span:after {
+  bottom: -8px;
+}
+body .wrapper .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  margin-top: -50px;
+  width: 50%;
+  margin-left: -25%;
+  text-align: center;
+}
+body .wrapper .title h1 {
+  color: #30C4C9;
+}
+body .wrapper .overlay {
+  position: absolute;
+  bottom: 150%;
+  height: 100%;
+  background: #3b0661a1;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+body .wrapper .overlay.anim {
+  left: 0;
+  bottom: 0;
+  animation: menu-anim 0.7s 1 ease-out normal;
+  width: 20%;
+  transition: all 0.5s ease;
+}
+body .wrapper .overlay.anim.reverse-anim {
+  left: 0;
+  bottom: 0;
+  animation: menu-anim 1s 1 ease-out reverse;
+  width: 25%;
+  transition: all 0.5s ease;
+}
+body .wrapper .overlay ul {
+  width: 100%;
+  text-align: center;
+  margin-top: 20%;
+  padding-left: 0;
+  margin-left: -10px;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+body .wrapper .overlay ul li {
+  margin: -10px 0;
+}
+body .wrapper .overlay ul li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+  overflow: hidden;
+}
+body .wrapper .overlay ul li a:after {
+  display: block;
+  border-radius: 2px;
+  content: '';
+  left: 0;
+  bottom: -10px;
+  height: 5px;
+  background: #ffffff;
+  transform: translateX(-101%);
+}
+body .wrapper .overlay ul li a:hover {
+  text-decoration: none;
+}
+body .wrapper .overlay ul li a:hover:after {
+  animation: border-anim 0.5s 1 ease normal;
+  transform: translateX(0);
+}
+@-webkit-keyframes border-anim {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes menu-anim {
+  0% {
+    left: 0;
+    bottom: -99%;
+    width: 100%;
+  }
+  33% {
+    left: -99.5%;
+    bottom: -99%;
+    width: 100%;
+  }
+  66% {
+    left: -99.5%;
+    bottom: 0;
+    width: 100%;
+  }
+  100% {
+    bottom: 0;
+    left: 0;
+    width: 25%;
+  }
+}
+
+
+
+
+
+/**** CIRCLE ***********/
+
+
+
+
+.selector {
+
+  opacity: 0.8;
+  margin-top: 10%;
+    margin-bottom: -8%;
+    position: relative;
+    left: 35%;
+    width: 430px;
+    height: 430px;
+}
+
+.selector, .selector button {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+
+}
+
+.selector button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-image: url('../images/BPL_circle_hover.jpg');
+    background-position: center;
+   background-size: 100% 100%;
+  border-radius: 50%;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  transition: all .1s;
+}
+
+
+.selector button:focus {
+  outline: none;
+}
+
+.selector ul {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+}
+
+.selector li {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  margin: 0 50%;
+  -webkit-transform: rotate(-360deg);
+  transition: all 0.8s ease-in-out;
+}
+
+.selector li input {
+  display: none;
+}
+.selector li input + label {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  line-height: 1px;
+  margin-left: 0;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.selector.open li input + label {
+  width: 85px;
+  height: 85px;
+  line-height: 75px;
+  margin-left: -40px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+
+
+
+
+
+/*********** TEAMS ************/
+
+
+
+/*   1  */
+
+
+.container1 {
+  position: relative;
+  width: 50%;
+}
+
+.image1 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay1 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container1:hover .overlay1 {
+  opacity: 1;
+  background-image: url('../images/Logos/chelsea.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text1 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/* 2 */
+
+
+.container2 {
+  position: relative;
+  width: 50%;
+}
+
+.image2 {
+  display: block;
+  width: 85px;
+  height: 85px;
+}
+
+.overlay2 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container2:hover .overlay2 {
+  opacity: 1;
+  background-image: url('../images/Logos/Tottenham.jpg');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text2 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/*   3  */
+
+
+.container3 {
+  position: relative;
+  width: 50%;
+}
+
+.image3 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay3 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container3:hover .overlay3 {
+  opacity: 1;
+  background-image: url('../images/Logos/Manchestercity.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text3 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+/*   4  */
+
+
+
+.container4 {
+  position: relative;
+  width: 50%;
+}
+
+.image4 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay4 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container4:hover .overlay4 {
+  opacity: 1;
+  background-image: url('../images/Logos/Liverpool.jpg');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text4 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+/*   5  */
+
+
+
+
+
+.container5 {
+  position: relative;
+  width: 50%;
+}
+
+.image5 {
+  display: block;
+  height: 87px;
+  width: 85px;
+}
+
+.overlay5 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 87px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container5:hover .overlay5 {
+  opacity: 1;
+  background-image: url('../images/Logos/Arsenal.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 87px;
+  width: 85px;
+  height: 87px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text5 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*   6  */
+
+
+
+
+.container6 {
+  position: relative;
+  width: 50%;
+}
+
+.image6 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay6 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container6:hover .overlay6 {
+  opacity: 1;
+  background-image: url('../images/Logos/Manchesterunited.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text6 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+/*   7  */
+
+
+
+
+.container7 {
+  position: relative;
+  width: 50%;
+}
+
+.image7 {
+  display: block;
+  height: 90px;
+  width: 90px;
+}
+
+.overlay7 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  width: 90px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container7:hover .overlay7 {
+  opacity: 1;
+  background-image: url('../images/Logos/Everton.png') ;
+   display: block;
+   background-position: center;
+   background-size: 90px 90px;
+  width: 90px;
+  height: 90px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text7 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/*   8  */
+
+
+
+
+.container8 {
+  position: relative;
+  width: 50%;
+}
+
+.image8 {
+  display: block;
+  height: 85px;
+  width: 85px;
+
+}
+
+.overlay8 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container8:hover .overlay8 {
+  opacity: 1;
+  background-image: url('../images/Logos/Southampton.jpg');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text8 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*   9  */
+
+
+
+
+.container9 {
+  position: relative;
+  width: 50%;
+}
+
+.image9 {
+  display: block;
+  height: 90px;
+  width: 85px;
+}
+
+.overlay9 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container9:hover .overlay9 {
+  opacity: 1;
+  background-image: url('../images/Logos/Bournemouth.jpg');
+   display: block;
+   background-position: center;
+   background-size: 85px 90px;
+  width: 85px;
+  height: 90px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text9 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*   10  */
+
+
+
+
+.container10 {
+  position: relative;
+  width: 50%;
+}
+
+.image10 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay10 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container10:hover .overlay10 {
+  opacity: 1;
+  background-image: url('../images/Logos/Westbrom.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text10 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*   11  */
+
+
+
+
+.container11 {
+  position: relative;
+  width: 50%;
+}
+
+.image11 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay11 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container11:hover .overlay11 {
+  opacity: 1;
+  background-image: url('../images/Logos/Westham.jpg');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text11 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*   12  */
+
+
+
+
+.container12 {
+  position: relative;
+  width: 50%;
+}
+
+.image12 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay12 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container12:hover .overlay12 {
+  opacity: 1;
+  background-image: url('../images/Logos/LeicesterCity.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 75px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text12 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*   13 */
+
+
+
+
+.container13{
+  position: relative;
+  width: 50%;
+}
+
+.image13 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay13 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container13:hover .overlay13 {
+  opacity: 1;
+  background-image: url('../images/Logos/Stokecity.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text13 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*   14 */
+
+
+
+
+.container14 {
+  position: relative;
+  width: 50%;
+}
+
+.image14 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay14 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container14:hover .overlay14 {
+  opacity: 1;
+  background-image: url('../images/Logos/Crystalpalace.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text14 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*   15  */
+
+
+
+
+.container15 {
+  position: relative;
+  width: 50%;
+}
+
+.image15 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay15{
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container15:hover .overlay15 {
+  opacity: 1;
+  background-image: url('../images/Logos/Swansea.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text15 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*   16  */
+
+
+
+
+.container16 {
+  position: relative;
+  width: 50%;
+}
+
+.image16 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay16 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container16:hover .overlay16 {
+  opacity: 1;
+  background-image: url('../images/Logos/Burnley.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text16 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*   17  */
+
+
+
+
+.container17 {
+  position: relative;
+  width: 50%;
+}
+
+.image17 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay17 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container17:hover .overlay17 {
+  opacity: 1;
+  background-image: url('../images/Logos/Watford.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text17 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+/*   18  */
+
+
+
+
+.container18 {
+  position: relative;
+  width: 50%;
+}
+
+.image18 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay18 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container18:hover .overlay18 {
+  opacity: 1;
+  background-image: url('../images/Logos/Hullcity.jpg');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text18 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/*   19  */
+
+
+
+
+.container19 {
+  position: relative;
+  width: 50%;
+}
+
+.image19 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay19 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container19:hover .overlay19 {
+  opacity: 1;
+  background-image: url('../images/Logos/Middlesbrough.png');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text19 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+/*   20  */
+
+
+
+
+.container20 {
+  position: relative;
+  width: 50%;
+}
+
+.image20 {
+  display: block;
+  height: 85px;
+  width: 85px;
+}
+
+.overlay20 {
+  position: absolute;
+  top:0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 85px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container20:hover .overlay20 {
+  opacity: 1;
+  background-image: url('../images/Logos/Sunderland.jpg');
+   display: block;
+   background-position: center;
+   background-size: 85px 85px;
+  width: 85px;
+  height: 85px;
+  bottom: 0;
+  height: 100%;
+}
+
+.text20 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+/*******  FOOTER *************/
+
+
+.mainFooter {
+  margin-top: 22%;
+  margin-bottom: 0;
+  display: block;
+
+
+}
+
+.footerSponsorStrip ul {
+    display: flex;
+
+    opacity: 0.6;
+    background: #fff;
+}
+
+ol, ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footerSponsorStrip li .type {
+    margin-top: auto;
+}
+
+ol ul, ul li {
+    list-style-type: none;
+}
+
+.footerSponsorStrip li:first-child {
+    border-right: 1px solid #e8e8e8;
+}
+.footerSponsorStrip li {
+    padding: 0 1.8rem;
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+.footerSponsorStrip li a {
+    -ms-flex-item-align: center;
+    align-self: center;
+    text-decoration: none;
+    color: #76766f;
+    text-align: center;
+    font-size: 0.7rem;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footerimage{
+  height: 100%;
+  width: 100%;
+}
+
+.footerimage:hover{
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+}
+
+
+.tooltipContainer, .visuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+
+.mainFooter .footerCorporate {
+    text-align: center;
+    font-size: 1.1rem;
+    
+}
+
+.mainFooter .footerCorporate ul {
+    float: none;
+    display: table;
+    margin: 0 auto 1rem;
+}
+
+.mainFooter .footerCorporate li:first-child {
+    display: block;
+    border-right: 0;
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+}
+.mainFooter .footerCorporate li:last-child {
+     margin-right: 1rem;
+    padding-right: 1rem;
+    border-right: none;
+}
+.mainFooter .footerCorporate li {
+    margin-right: 1rem;
+    padding-right: 1rem;
+    border-right: 1px solid #242424;
+}
+.mainFooter .footerCorporate li {
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    font-size: 0.7rem;
+}
+.mainFooter .footerCorporate .official {
+    float: none;
+    text-align: center;
+}
+.mainFooter .footerCorporate a {
+height: 42px;
+    color: white;
+    text-decoration: none;
+        background-color: transparent;
+}
+
+.mainFooter .footerCorporate  a:hover {
+  background-color:white ;
+  color: black;
+}
+
+.wrapper2.col-12 {
+    float: none;
+        margin-top: 1%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.pl-logo-corporate :hover {
+   background-color:white ;
+}
+
+.mainFooter .footerCorporate .official {
+    float: none;
+    text-align: center;
+
+}
+.pl{
+height: 100%;
+width: 20%;
+}
+
+
+
+

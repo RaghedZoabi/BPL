@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Managers</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/Managers.css">
+
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <span class="menu"></span>
+    <div class="overlay">
+        <ul><li><a href="index.html">Home</a></li>
+            <li><a href="Table.html">Table</a></li>
+            <li><a href="Stats.html">Stats</a></li>
+            <li><a href="Stadiums.html">Stadiums</a></li>
+            <li><a href="Managers.html">Managers</a></li>
+            <li><a href="History.html">History</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Colors.html">Colors</a></li>
+        </ul>
+    </div>
+</div>
+
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="js/Managers.js"></script>
+
+
+
+<div class="main">
+
+<h1>Managers</h1>
+
+<h2>Filter</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('England')"> England</button>
+  <button class="btn" onclick="filterSelection('Italy')"> Italy</button>
+  <button class="btn" onclick="filterSelection('France')"> France</button>
+  <button class="btn" onclick="filterSelection('Portugal')"> Portugal</button>
+  <button class="btn" onclick="filterSelection('Spain')"> Spain</button>
+  <button class="btn" onclick="filterSelection('Wales')"> Wales</button>
+  <button class="btn" onclick="filterSelection('Other')"> Other</button>
+  
+  
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column England">
+    <div class="content" >
+      <img src="images/Managers/Bournemouth.jpg" alt="England" style="width:100%;
+    height: 145px;">
+      <h4>Eddie Howe</h4>
+      <p>Bournemouth</p>
+      <p>England <img src="images/Managers/England.png" class="nationality"></p>
+    </div>
+  </div>
+  <div class="column France">
+    <div class="content">
+    <img src="images/Managers/Arsenal.jpg" alt="France" style="width:100%;
+    height: 145px;">
+      <h4>Arsène Wenger</h4>
+      <p>Arsenal</p>
+      <p>France <img src="images/Managers/France.png" class="nationality"></p>
+    </div>
+  </div>
+  <div class="column England">
+    <div class="content">
+    <img src="images/Managers/Burnley.jpg" alt="England" style="width:100% ; height: 145px;">
+      <h4>Sean Dyche</h4>
+      <p>Burnley</p>
+      <p>England <img src="images/Managers/England.png" class="nationality"></p>
+    </div>
+  </div>
+  
+  <div class="column Italy">
+    <div class="content">
+      <img src="images/Managers/Chelsea.jpg" alt="Italy" style="width:100%; height: 145px;">
+      <h4>Antonio Conte</h4>
+      <p>Chelsea</p>
+      <p>Italy <img src="images/Managers/Italy.png" class="nationality"></p>
+    </div>
+  </div>
+  <div class="column England">
+    <div class="content">
+    <img src="images/Managers/Crystal_Palace.jpg" alt="England" style="width:100%; height: 145px;">
+      <h4>Sam Allardyce</h4>
+      <p>Crystal Palace</p>
+      <p>England <img src="images/Managers/England.png" class="nationality"></p>
+    </div>
+  </div>
+  <div class="column Other">
+    <div class="content">
+    <img src="images/Managers/Everton.jpg" alt="Other" style="width:100%; height: 145px;">
+      <h4>Ronald Koeman</h4>
+      <p>Everton</p>
+      <p>Netherlands <img src="images/Managers/Netherlands.png" class="nationality"></p>
+    </div>
+  </div>
+
+  <div class="column Portugal">
+    <div class="content">
+      <img src="images/Managers/Hull_City.jpg" alt="Portugal" style="width:100%; height: 145px;">
+      <h4>Marco Silva</h4>
+      <p>Hull City</p>
+      <p>Portugal <img src="images/Managers/Portugal.png" class="nationality"></p>
+    </div>
+  </div>
+  <div class="column Italy">
+    <div class="content">
+    <img src="images/Managers/Leicester_City.jpg" alt="Italy" style="width:100%; height: 145px;">
+      <h4>Claudio Ranieri</h4>
+      <p>Leicester City</p>
+      <p>Italy <img src="images/Managers/Italy.png" class="nationality"></p>
+    </div>
+  </div>
+  <div class="column Other">
+    <div class="content">
+    <img src="images/Managers/Liverpool.jpg" alt="Other" style="width:100%; height: 145px;">
+      <h4>Jürgen Klopp</h4>
+      <p>Liverpool</p>
+      <p>Germany <img src="images/Managers/Germany.png" class="nationality"></p>
+    </div>
+  </div>
+   <div class="column Spain">
+    <div class="content">
+    <img src="images/Managers/Manchester_City.jpg" alt="Spain" style="width:100%; height: 145px;">
+      <h4>Josep Guardiola</h4>
+      <p>Manchester City</p>
+      <p>Spain <img src="images/Managers/Spain.png" class="nationality"></p>
+    </div>
+  </div>
+   <div class="column Portugal">
+    <div class="content">
+    <img src="images/Managers/Manchester_United.jpg" alt="Portugal" style="width:100%; height: 145px;">
+      <h4>José Mourinho</h4>
+      <p>Manchester United</p>
+      <p>Portugal <img src="images/Managers/Portugal.png" class="nationality"></p>
+    </div>
+  </div>
+   <div class="column Spain">
+    <div class="content">
+    <img src="images/Managers/Middlesbrough.jpg" alt="Spain" style="width:100%; height: 145px;">
+      <h4>Aitor Karanka</h4>
+      <p>Middlesbrough</p>
+      <p>Spain <img src="images/Managers/Spain.png" class="nationality"></p>
+    </div>
+  </div>
+   <div class="column France">
+    <div class="content">
+    <img src="images/Managers/Southampon.jpg" alt="France" style="width:100%; height: 145px;">
+      <h4>Claude Puel</h4>
+      <p>Southampon</p>
+      <p>France <img src="images/Managers/France.png" class="nationality"></p>
+    </div>
+  </div>
+   <div class="column Wales">
+    <div class="content">
+    <img src="images/Managers/Stoke_City.jpg" alt="Wales" style="width:100%; height: 145px;">
+      <h4>Mark Hughes</h4>
+      <p>Stoke City</p>
+      <p>Wales <img src="images/Managers/Wales.png" class="nationality"></p>
+    </div>
+  </div>
+   <div class="column Other">
+    <div class="content">
+    <img src="images/Managers/Sunderland.jpg" alt="Other" style="width:100%; height: 145px;">
+      <h4>David Moyes</h4>
+      <p>Sunderland</p>
+      <p>Scotland <img src="images/Managers/Scotland.png" class="nationality"></p>
+    </div>
+  </div>
+     <div class="column England">
+    <div class="content">
+    <img src="images/Managers/Swansea.jpg" alt="England" style="width:100%; height: 145px;">
+      <h4>Paul Clement</h4>
+      <p>Swansea City</p>
+      <p>England <img src="images/Managers/England.png" class="nationality"></p>
+
+    </div>
+  </div>
+     <div class="column Other">
+    <div class="content">
+    <img src="images/Managers/Tottenham.jpg" alt="Other" style="width:100%; height: 145px;">
+      <h4>Mauricio Pochettino</h4>
+      <p>Tottenham</p>
+      <p>Argentina <img src="images/Managers/Argentina.png" class="nationality"></p>
+
+    </div>
+  </div>
+     <div class="column Italy">
+    <div class="content">
+    <img src="images/Managers/Watford.jpg" alt="Italy" style="width:100%; height: 145px;">
+      <h4>Walter Mazzarri</h4>
+      <p>Watford</p>
+      <p>Italy <img src="images/Managers/Italy.png" class="nationality"></p>
+    </div>
+  </div>
+     <div class="column Wales">
+    <div class="content">
+    <img src="images/Managers/West_Brom.png" alt="Wales" style="width:100%; height: 145px;">
+      <h4>Tony Pulis</h4>
+      <p>West Brom</p>
+      <p>Wales <img src="images/Managers/Wales.png" class="nationality"></p>
+    </div>
+  </div>
+      <div class="column Other">
+    <div class="content">
+    <img src="images/Managers/Westham.jpg" alt="Other" style="width:100%; height: 145px;">
+      <h4>Slaven Bilic</h4>
+      <p>Westham</p>
+      <p>Croatia <img src="images/Managers/Croatia.png" class="nationality"></p>
+    </div>
+  </div>
+
+
+     
+<!-- END GRID -->
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<footer class="mainFooter">
+<div class="footerSponsorStrip">
+            <ul>
+    <li>
+        <a href="https://www.easports.com/fifa?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link" target="_blank">
+            <span alt="" class="large icn sponsor-footer-ea"><img src="images/Spon/EA.png" alt="ea" class="footerimage"></span>
+            <span alt="" class="type">Lead Partner<span class="visuallyHidden">EA SPORTS</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.home.barclays/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link" target="_blank">
+            <span alt="" class="large icn sponsor-footer-barclays"><img src="images/Spon/barclays.png" alt="barclays" class="footerimage"></span>
+            <span alt="" class="type">Official Bank<span class="visuallyHidden">Barclays</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="http://www.cadbury.co.uk?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link" target="_blank">
+            <span alt="" class="large icn sponsor-footer-cadbury"><img src="images/Spon/Cadbury.jpg" alt="Cadbury" class="footerimage"></span>
+            <span alt="" class="type">Official Snack<span class="visuallyHidden">Cadbury</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.carling.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link" target="_blank">
+            <span alt="" class="large icn sponsor-footer-carling"><img src="images/Spon/Carling.jpg" alt="Carling" class="footerimage"></span>
+            <span alt="" class="type">Official Beer<span class="visuallyHidden">Carling</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="http://www.nikefootball.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link" target="_blank">
+            <span alt="" class="large icn sponsor-footer-nike"><img src="images/Spon/nike.png" alt="nike" class="footerimage"></span>
+            <span alt="" class="type">Official Ball<span class="visuallyHidden">Nike</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="http://www.tagheuer.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link" target="_blank">
+            <span alt="" class="large icn sponsor-footer-tag"><img src="images/Spon/tagheuer.jpg" alt="tagheuer" class="footerimage"></span>
+            <span alt="" class="type">Official Timekeeper<span class="visuallyHidden">TAG Heuer</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="http://www.sporting-id.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link" target="_blank">
+            <span alt="" class="large icn sponsor-footer-sporting"><img src="images/Spon/SportingiD.jpg" alt="SportingiD" class="footerimage"></span>
+            <span alt="" class="type">Official Licensee<span class="visuallyHidden">Sporting ID</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.toppsdirect.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link" target="_blank">
+            <span alt="" class="large icn sponsor-footer-topps"><img src="images/Spon/Topps.jpg" alt="Topps" class="footerimage"></span>
+            <span alt="" class="type">Official Licensee<span class="visuallyHidden">Topps</span></span>
+        </a>
+    </li>
+            </ul>
+        </div>
+<div class="footerCorporate" data-script="pl_footer" data-widget="footer-corporate">
+        <div class="wrapper2 col-12">
+            <ul role="menu">
+                        <li>
+                                <strong class="">© PREMIER LEAGUE 2017</strong>
+                        </li>
+                        <li>
+                                <a href="" class="" role="menuitem">Modern Slavery Statement</a>
+                        </li>
+                        <li>
+                                <a href="" class="" role="menuitem">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                                <a href="" class="" role="menuitem">Privacy Policy</a>
+                        </li>
+                        <li>
+                                <a href="" class="" role="menuitem">Cookie Policy</a>
+                        </li>
+                        <li>
+                                <a href="#" class="backToTopContainer" role="menuitem">Back To Top</a>
+                        </li>
+            </ul>
+            <div class="official"><img src="images/pl.png" alt="pl" class="pl"></div>
+        </div>
+</div>
+
+</footer>
+
+  
+
+
+
+
+</body>
+
+</html>

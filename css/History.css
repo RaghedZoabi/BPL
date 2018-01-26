@@ -1,0 +1,377 @@
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+
+body {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+  background-color:#1F2739;
+  background-size: 100% 100%;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif;
+
+}
+h2{
+
+    color: red;
+}
+
+.headerimage
+{
+  height: 75%;
+}
+
+body .wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body .wrapper span {
+  z-index: 9999;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 35px;
+  height: 4px;
+  background: #ffffff;
+  cursor: pointer;
+}
+body .wrapper span:before, body .wrapper span:after {
+  display: block;
+  position: absolute;
+  content: '';
+  left: 0;
+  height: 4px;
+  width: 35px;
+  background: #ffffff;
+}
+body .wrapper span:before {
+  top: -8px;
+}
+body .wrapper span:after {
+  bottom: -8px;
+}
+body .wrapper .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  margin-top: -50px;
+  width: 50%;
+  margin-left: -25%;
+  text-align: center;
+}
+body .wrapper .title h1 {
+  color: #30C4C9;
+}
+body .wrapper .overlay {
+  position: absolute;
+  bottom: 150%;
+  height: 100%;
+  background: #3b0661a1;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+body .wrapper .overlay.anim {
+  left: 0;
+  bottom: 0;
+  animation: menu-anim 0.7s 1 ease-out normal;
+  width: 20%;
+  transition: all 0.5s ease;
+}
+body .wrapper .overlay.anim.reverse-anim {
+  left: 0;
+  bottom: 0;
+  animation: menu-anim 1s 1 ease-out reverse;
+  width: 25%;
+  transition: all 0.5s ease;
+}
+body .wrapper .overlay ul {
+  width: 100%;
+  text-align: center;
+  margin-top: 20%;
+  padding-left: 0;
+  margin-left: -10px;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+body .wrapper .overlay ul li {
+  margin: -10px 0;
+}
+body .wrapper .overlay ul li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+  overflow: hidden;
+}
+body .wrapper .overlay ul li a:after {
+  display: block;
+  border-radius: 2px;
+  content: '';
+  left: 0;
+  bottom: -10px;
+  height: 5px;
+  background: #ffffff;
+  transform: translateX(-101%);
+}
+body .wrapper .overlay ul li a:hover {
+  text-decoration: none;
+}
+body .wrapper .overlay ul li a:hover:after {
+  animation: border-anim 0.5s 1 ease normal;
+  transform: translateX(0);
+}
+@-webkit-keyframes border-anim {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes menu-anim {
+  0% {
+    left: 0;
+    bottom: -99%;
+    width: 100%;
+  }
+  33% {
+    left: -99.5%;
+    bottom: -99%;
+    width: 100%;
+  }
+  66% {
+    left: -99.5%;
+    bottom: 0;
+    width: 100%;
+  }
+  100% {
+    bottom: 0;
+    left: 0;
+    width: 25%;
+  }
+}
+
+
+
+
+/*******  FOOTER *************/
+
+
+.mainFooter {
+  margin-top: 7%;
+  margin-bottom: 0;
+  display: block;
+
+
+}
+
+.footerSponsorStrip ul {
+    display: flex;
+
+    opacity: 0.6;
+    background: #fff;
+}
+
+ol, ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footerSponsorStrip li .type {
+    margin-top: auto;
+}
+
+ol ul, ul li {
+    list-style-type: none;
+}
+
+.footerSponsorStrip li:first-child {
+    border-right: 1px solid #e8e8e8;
+}
+.footerSponsorStrip li {
+    padding: 0 1.8rem;
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+.footerSponsorStrip li a {
+    -ms-flex-item-align: center;
+    align-self: center;
+    text-decoration: none;
+    color: #76766f;
+    text-align: center;
+    font-size: 0.7rem;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footerimage{
+  height: 100%;
+  width: 100%;
+}
+
+.footerimage:hover{
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+}
+
+
+.tooltipContainer, .visuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+
+.mainFooter .footerCorporate {
+    text-align: center;
+    font-size: 1.1rem;
+    
+}
+
+.mainFooter .footerCorporate ul {
+    float: none;
+    display: table;
+    margin: 0 auto 1rem;
+}
+
+.mainFooter .footerCorporate li:first-child {
+    display: block;
+    border-right: 0;
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+}
+.mainFooter .footerCorporate li:last-child {
+     margin-right: 1rem;
+    padding-right: 1rem;
+    border-right: none;
+}
+.mainFooter .footerCorporate li {
+    margin-right: 1rem;
+    padding-right: 1rem;
+    border-right: 1px solid #242424;
+}
+.mainFooter .footerCorporate li {
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    font-size: 0.7rem;
+}
+.mainFooter .footerCorporate .official {
+    float: none;
+    text-align: center;
+}
+.mainFooter .footerCorporate a {
+height: 42px;
+    color: white;
+    text-decoration: none;
+        background-color: transparent;
+}
+
+.mainFooter .footerCorporate  a:hover {
+  background-color:white ;
+  color: black;
+}
+
+.wrapper2.col-12 {
+    float: none;
+        margin-top: 1%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.pl-logo-corporate :hover {
+   background-color:white ;
+}
+
+.mainFooter .footerCorporate .official {
+    float: none;
+    text-align: center;
+
+}
+.pl{
+height: 100%;
+width: 20%;
+}
+
+
+
+
+
+
+h5{
+text-align: center;
+  font-size:42px;
+  color:#fff;
+  height: 0;
+}
+
+
+
+
+
+/*********/
+
+.thumbnail .image{
+position: relative;
+    overflow: hidden;
+  }
+
+
+  body .wrapper{
+  color: white;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 15%;
+  }
+
+  .standardArticle>table tr td, .standardArticle>table tr th{
+
+  }
+.standardArticle>table tbody td{
+  position: relative;
+  font-size: 16px;
+  
+        padding: 1%
+}
+
+  table{
+    border-spacing: 0;
+        background: #323C50;
+  }
+  .standardArticle>table tbody td h6:after
+  {
+    content: "";
+    width: 1px;
+    height: 74%;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    background: #e8e8e8;
+  }
+  h6{    
+
+  font-size: 16px;
+    height: 0px;
+  }
+  td, th{
+    padding: 0;
+  }
